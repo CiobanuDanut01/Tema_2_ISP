@@ -4,6 +4,8 @@
 
 package Proiect_v2;
 
+import java.util.List;
+
 /************************************************************/
 /**
  * 
@@ -25,7 +27,8 @@ public class Firma {
 	 * 
 	 */
 	private int nrDepartamente;
-
+	//lista cu toate departamentele? si aici sa fie adaugat departamentul
+	private List<Departament> departamente;
 	/**
 	 * 
 	 */
@@ -36,7 +39,8 @@ public class Firma {
 	 * 
 	 * @param dep 
 	 */
-	public void alocareBuget(Departament dep) {
+	public void alocareBuget(Departament dep, String buget) {
+		dep.setBuget(buget);
 	}
 
 	/**
@@ -50,5 +54,8 @@ public class Firma {
 	 * @param dep 
 	 */
 	public void stergereDepartament(Departament dep) {
+		if(departamente != null) {
+			departamente.remove(departamente.stream().filter(e -> e.equals(dep)).findFirst().get());
+		}
 	}
 }

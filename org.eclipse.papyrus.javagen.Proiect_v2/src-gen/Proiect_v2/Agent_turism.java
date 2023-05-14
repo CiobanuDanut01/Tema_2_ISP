@@ -8,7 +8,7 @@ package Proiect_v2;
 /**
  * 
  */
-public class Agent_turism {
+public class Agent_turism extends Persoana{
 	/**
 	 * 
 	 */
@@ -18,10 +18,26 @@ public class Agent_turism {
 	 */
 	private String angajatID;
 
+	
+	
+	
+	public Agent_turism() {
+		super();
+	}
+
+	public Agent_turism(String nume, String prenume, String CNP, int vechime, String angajatID) {
+		super(nume, prenume, CNP);
+		this.vechime = vechime;
+		this.angajatID = angajatID;
+	}
+
 	/**
 	 * 
 	 */
 	public void afisare() {
+		super.afisare();
+		System.out.println("Vechime: "+ vechime);
+		System.out.println("ID: " + angajatID);
 	}
 
 	/**
@@ -29,18 +45,38 @@ public class Agent_turism {
 	 * @param dep 
 	 */
 	public void schimbareDepartament(Departament dep) {
+		dep.angajare(this);
 	}
 
 	/**
 	 * 
 	 * @param valoare 
 	 */
-	public void acordareDiscount(int valoare) {
+	public void acordareDiscount(int valoare) {//Rezervare rezervare si dupa rezervare.cost - valoare || cost * valoare
 	}
 
 	/**
 	 * 
 	 */
 	public void timpPensionare() {
+		System.out.println("Mai ai " + (40 - vechime) + " pana la pensionare");
 	}
+
+	public int getVechime() {
+		return vechime;
+	}
+
+	public void setVechime(int vechime) {
+		this.vechime = vechime;
+	}
+
+	public String getAngajatID() {
+		return angajatID;
+	}
+
+	public void setAngajatID(String angajatID) {
+		this.angajatID = angajatID;
+	}
+	
+	
 }

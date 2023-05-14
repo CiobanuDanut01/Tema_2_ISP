@@ -4,6 +4,9 @@
 
 package Proiect_v2;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /************************************************************/
 /**
  * 
@@ -17,6 +20,8 @@ public class Rezervare {
 	 * 
 	 */
 	private String dataRezervare;
+	
+	private final static String FORMAT = "dd-MM-yyyy";
 	/**
 	 * 
 	 */
@@ -26,10 +31,30 @@ public class Rezervare {
 	 */
 	public Client client;
 
+	
+	
+	public Rezervare(String codIdentificare, String dataRezervare, float cost, Client client) {
+		super();
+		this.codIdentificare = codIdentificare;
+		this.dataRezervare = dataRezervare;
+		this.cost = cost;
+		this.client = client;
+	}
+
 	/**
 	 * 
 	 */
 	public void afisare() {
+		if(this.client != null) {
+			System.out.println("Detalii despre client:");
+			client.afisare();
+		}
+		else {
+			System.out.println("Aceasta rezervare nu are niciun client asociat.");
+		}
+		System.out.println("Cod de identificare: "+ codIdentificare);
+		System.out.println("Data rezervarii"+dataRezervare);
+		System.out.println("Costul total: " + cost);
 	}
 
 	/**
@@ -37,11 +62,58 @@ public class Rezervare {
 	 * @param data 
 	 */
 	public void schimbareData(String data) {
+		SimpleDateFormat sdf = new SimpleDateFormat(Rezervare.FORMAT);
+		
+		try {
+			Date date = sdf.parse(data);
+			
+			this.dataRezervare = data;
+		}catch(Exception e) {
+			System.out.println("Data nu este valida");
+		}
 	}
 
 	/**
 	 * 
 	 */
-	public void asigurareTransport() {
+	public void asigurareTransport() {//variabila bool transportAsigurat?
 	}
+
+	
+	public static String getFormat() {
+		return FORMAT;
+	}
+
+	public String getCodIdentificare() {
+		return codIdentificare;
+	}
+
+	public void setCodIdentificare(String codIdentificare) {
+		this.codIdentificare = codIdentificare;
+	}
+
+	public String getDataRezervare() {
+		return dataRezervare;
+	}
+
+//	public void setDataRezervare(String dataRezervare) {
+//		this.dataRezervare = dataRezervare;
+//	}
+
+	public float getCost() {
+		return cost;
+	}
+
+	public void setCost(float cost) {
+		this.cost = cost;
+	}
+
+	public Client getClient() {
+		return client;
+	}
+
+	public void setClient(Client client) {
+		this.client = client;
+	}
+	
 }
