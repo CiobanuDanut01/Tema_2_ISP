@@ -4,11 +4,14 @@
 
 package Proiect_v2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /************************************************************/
 /**
  * 
  */
-public class Persoana extends Client {
+public class Persoana{
 	/**
 	 * 
 	 */
@@ -21,11 +24,32 @@ public class Persoana extends Client {
 	 * 
 	 */
 	protected String CNP;
+	protected List<Locatii> locatii;
+	
+	
+	public Persoana() {
+		super();
+		this.locatii = new ArrayList<Locatii>();
+		this.nume = new String("");
+		this.prenume = new String("");
+		this.CNP = new String("");
+	}
 
+
+	public Persoana(String nume, String prenume, String CNP) {
+		super();
+		this.nume = nume;
+		this.prenume = prenume;
+		this.CNP = CNP;
+	}
+	
+	
 	/**
 	 * 
 	 */
 	public void afisare() {
+		System.out.println("Nume Prenume: " + nume + " " + prenume);
+		System.out.println("CNP: " + CNP);
 	}
 
 	/**
@@ -33,6 +57,21 @@ public class Persoana extends Client {
 	 * @param loc 
 	 */
 	public void propunereLocatie(Locatii loc) {
+		int ok = 0;
+		try {
+			for (Locatii locatii2 : locatii) {
+				if(loc.equals(locatii2)) {
+					throw new Exception("Locatia a fost propusa deja!");
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+			ok = 1;
+		}
+		if(ok == 0)
+			this.locatii.add(loc);
+			
 	}
 
 	/**
@@ -42,11 +81,57 @@ public class Persoana extends Client {
 	 * @param CNP 
 	 */
 	public void modificareDatePersonale(String nume, String prenume, String CNP) {
+		this.setNume(nume);
+		this.setCNP(CNP);
+		this.setPrenume(prenume);
 	}
 
 	/**
 	 * 
 	 */
 	public void deschidereCont() {
+		System.out.println("Contul a fost creat cu succes!");
 	}
+
+
+	public String getNume() {
+		return nume;
+	}
+
+
+	public void setNume(String nume) {
+		this.nume = nume;
+	}
+
+
+	public String getPrenume() {
+		return prenume;
+	}
+
+
+	public void setPrenume(String prenume) {
+		this.prenume = prenume;
+	}
+
+
+	public String getCNP() {
+		return CNP;
+	}
+
+
+	public void setCNP(String cNP) {
+		CNP = cNP;
+	}
+
+
+	public List<Locatii> getLocatii() {
+		return locatii;
+	}
+
+
+	public void setLocatii(List<Locatii> locatii) {
+		this.locatii = locatii;
+	}
+	
+	
 }

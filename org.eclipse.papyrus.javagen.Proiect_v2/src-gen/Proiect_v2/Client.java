@@ -8,16 +8,29 @@ package Proiect_v2;
 /**
  * 
  */
-public class Client {
+public class Client extends Persoana {
 	/**
 	 * 
 	 */
 	private float buget;
 
+	public Client(String nume, String prenume, String CNP, float buget) {
+		super(nume, prenume, CNP);
+		this.buget = buget;
+	}
+
+	public Client() {
+		// TODO Auto-generated constructor stub
+		super();
+		this.buget = 0;
+	}
+
 	/**
 	 * 
 	 */
 	public void afisare() {
+		super.afisare();
+		System.out.println("Buget: "+ buget);
 	}
 
 	/**
@@ -25,12 +38,16 @@ public class Client {
 	 * @param buget 
 	 */
 	public void stabilireBuget(float buget) {
+		System.out.println("Noul buget este: " + buget);
+		this.buget = buget;
 	}
 
 	/**
 	 * 
 	 */
-	public void adaugareRezervare() {
+	public void adaugareRezervare(Rezervare rezervare) {
+		rezervare.client = this;
+		System.out.println("Rezervarea a fost facuta.");
 	}
 
 	/**
@@ -38,11 +55,14 @@ public class Client {
 	 * @param rezervare 
 	 */
 	public void anulareRezervare(Rezervare rezervare) {
+		rezervare.client = null;
+		System.out.println("Rezervarea a fost anulata.");
 	}
+
 
 	/**
 	 * 
 	 */
-	public void feedback() {
+	public void feedback() {//ce sa faca? ar putea clientul sa aiba un mesaj private pe care sa-l returneze
 	}
 }

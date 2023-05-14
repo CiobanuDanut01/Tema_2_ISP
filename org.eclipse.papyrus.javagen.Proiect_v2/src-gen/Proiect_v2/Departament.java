@@ -4,6 +4,8 @@
 
 package Proiect_v2;
 
+import java.util.List;
+
 /************************************************************/
 /**
  * 
@@ -16,11 +18,13 @@ public class Departament {
 	/**
 	 * 
 	 */
-	private String buget;
+	private String buget;//int?
 	/**
 	 * 
 	 */
 	private Locatii locatieDepartament;
+	//un vector de persoane in care se regasesc angajatii?
+	private List<Persoana> angajati;//nu era
 	/**
 	 * 
 	 */
@@ -35,7 +39,7 @@ public class Departament {
 	/**
 	 * 
 	 */
-	public void angajare() {
+	public void angajare(Agent_turism agent) {//nu avea referinta catre agent
 	}
 
 	/**
@@ -51,4 +55,39 @@ public class Departament {
 	 */
 	public void atribuireProiect(Agent_turism agent) {
 	}
+
+	public String getNume() {
+		return nume;
+	}
+
+	public void setNume(String nume) {
+		this.nume = nume;
+	}
+
+	public String getBuget() {
+		return buget;
+	}
+
+	public void setBuget(String buget) {
+		this.buget = buget;
+	}
+
+	public Locatii getLocatieDepartament() {
+		return locatieDepartament;
+	}
+
+	public void setLocatieDepartament(Locatii locatieDepartament) {
+		this.locatieDepartament = locatieDepartament;
+	}
+
+	public int getNrAngajati() {
+		return nrAngajati;
+	}
+
+	public void setNrAngajati(int nrAngajati) {
+		this.nrAngajati = nrAngajati;
+	}
+	
+	
+	
 }
