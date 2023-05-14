@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:Codegen="http://www.eclipse.org/papyrus/Codegen/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_jzKrwM1vEe2jzv8oVzIImA" name="Proiect_v2">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_j0ao8M1vEe2jzv8oVzIImA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_khE6oM1vEe2jzv8oVzIImA" name="Client">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_9kkNQM1vEe2jzv8oVzIImA" name="buget" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_CmyJ8M1wEe2jzv8oVzIImA" name="afisare"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_h1gLsORZEe2KPqX_8wG7gA" name="stabilireBuget">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_oa6ZcORZEe2KPqX_8wG7gA" name="buget">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_oyUM0ORZEe2KPqX_8wG7gA" name="adaugareRezervare"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ryYrkORZEe2KPqX_8wG7gA" name="anulareRezervare">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_vWkkAORZEe2KPqX_8wG7gA" name="rezervare" type="_hDI-sM1wEe2jzv8oVzIImA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_JQcsEORaEe2KPqX_8wG7gA" name="feedback"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_lWgGwM1vEe2jzv8oVzIImA" name="Agent_turism">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5gOOEM1vEe2jzv8oVzIImA" name="vechime" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_jaiXEM10Ee2jzv8oVzIImA" name="angajatID" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_7-AfIM1vEe2jzv8oVzIImA" name="afisare"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_55Of4ORYEe2KPqX_8wG7gA" name="schimbareDepartament">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_BvDzsORZEe2KPqX_8wG7gA" name="dep" type="_1QFuQM1yEe2jzv8oVzIImA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_FQ_pYORZEe2KPqX_8wG7gA" name="acordareDiscount">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PTFZYORZEe2KPqX_8wG7gA" name="valoare">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_bcPuIORaEe2KPqX_8wG7gA" name="timpPensionare"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pYNBoM1vEe2jzv8oVzIImA" name="Persoana">
+      <generalization xmi:type="uml:Generalization" xmi:id="_b6JroM1wEe2jzv8oVzIImA" general="_khE6oM1vEe2jzv8oVzIImA"/>
+      <generalization xmi:type="uml:Generalization" xmi:id="_c7S_kM1wEe2jzv8oVzIImA" general="_lWgGwM1vEe2jzv8oVzIImA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w3LUoM1vEe2jzv8oVzIImA" name="nume" visibility="protected">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0ovhwM1vEe2jzv8oVzIImA" name="prenume" visibility="protected">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0-7NIM1vEe2jzv8oVzIImA" name="CNP" visibility="protected">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_30NYMM1vEe2jzv8oVzIImA" name="afisare"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_TXg4IORZEe2KPqX_8wG7gA" name="propunereLocatie">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_XeKkcORZEe2KPqX_8wG7gA" name="loc" type="_rsmT4M10Ee2jzv8oVzIImA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_X9Wa0ORZEe2KPqX_8wG7gA" name="modificareDatePersonale">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ejYToORZEe2KPqX_8wG7gA" name="nume">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_f07bEORZEe2KPqX_8wG7gA" name="prenume">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hOiSUORZEe2KPqX_8wG7gA" name="CNP">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_mcSUIORaEe2KPqX_8wG7gA" name="deschidereCont"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hDI-sM1wEe2jzv8oVzIImA" name="Rezervare">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7UHYIM1wEe2jzv8oVzIImA" name="codIdentificare" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__nMW4M1wEe2jzv8oVzIImA" name="dataRezervare" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_GgGvcM1xEe2jzv8oVzIImA" name="cost" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qHHgoM1wEe2jzv8oVzIImA" name="client" type="_khE6oM1vEe2jzv8oVzIImA" association="_qHBaAM1wEe2jzv8oVzIImA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2ZUKsM1zEe2jzv8oVzIImA" name="afisare"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_wHzzsORZEe2KPqX_8wG7gA" name="schimbareData">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_zWgkUORZEe2KPqX_8wG7gA" name="data">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_KoUd8ORaEe2KPqX_8wG7gA" name="asigurareTransport" concurrency="guarded"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_qHBaAM1wEe2jzv8oVzIImA" memberEnd="_qHHgoM1wEe2jzv8oVzIImA _qHIHss1wEe2jzv8oVzIImA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qHCoIM1wEe2jzv8oVzIImA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qHCoIc1wEe2jzv8oVzIImA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_qHIHss1wEe2jzv8oVzIImA" name="rezervare" type="_hDI-sM1wEe2jzv8oVzIImA" association="_qHBaAM1wEe2jzv8oVzIImA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_s7P1IM1wEe2jzv8oVzIImA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s7iJAM1wEe2jzv8oVzIImA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_1QFuQM1yEe2jzv8oVzIImA" name="Departament">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_f_OjQM1zEe2jzv8oVzIImA" name="nume" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_jDjP4M1zEe2jzv8oVzIImA" name="buget" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_l1aTgM1zEe2jzv8oVzIImA" name="locatieDepartament" visibility="private" type="_rsmT4M10Ee2jzv8oVzIImA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sJaBIM1zEe2jzv8oVzIImA" name="nrAngajati" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_0Snj8M1zEe2jzv8oVzIImA" name="afisare"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MHgVcM10Ee2jzv8oVzIImA" name="angajare"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_NQCDwM10Ee2jzv8oVzIImA" name="concediere">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hehWUM10Ee2jzv8oVzIImA" name="agent" type="_lWgGwM1vEe2jzv8oVzIImA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Kn210ORYEe2KPqX_8wG7gA" name="atribuireProiect">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_O_rKoORYEe2KPqX_8wG7gA" name="agent" type="_lWgGwM1vEe2jzv8oVzIImA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_2_5fAM1yEe2jzv8oVzIImA" name="Firma">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_46MzEM1zEe2jzv8oVzIImA" name="Nume" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7HzTEM1zEe2jzv8oVzIImA" name="locatieSediu" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_9lYv0M1zEe2jzv8oVzIImA" name="capital" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_FXA5EM10Ee2jzv8oVzIImA" name="nrDepartamente" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_HkrDcM10Ee2jzv8oVzIImA" name="afisare"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Xdk10M10Ee2jzv8oVzIImA" name="alocareBuget">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bft1kM10Ee2jzv8oVzIImA" name="dep" type="_1QFuQM1yEe2jzv8oVzIImA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_rt8F4ORYEe2KPqX_8wG7gA" name="adaugareDepartament"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_wSzYMORYEe2KPqX_8wG7gA" name="stergereDepartament">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_yg2kIORYEe2KPqX_8wG7gA" name="dep" type="_1QFuQM1yEe2jzv8oVzIImA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_8MJhcM1yEe2jzv8oVzIImA" memberEnd="_8MKIgs1yEe2jzv8oVzIImA _8MKvkM1yEe2jzv8oVzIImA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8MKIgM1yEe2jzv8oVzIImA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8MKIgc1yEe2jzv8oVzIImA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_8MKvkM1yEe2jzv8oVzIImA" name="agent_turism" type="_lWgGwM1vEe2jzv8oVzIImA" aggregation="shared" association="_8MJhcM1yEe2jzv8oVzIImA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dISLUM1zEe2jzv8oVzIImA" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_8MKIgs1yEe2jzv8oVzIImA" name="departament" type="_1QFuQM1yEe2jzv8oVzIImA" association="_8MJhcM1yEe2jzv8oVzIImA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_9NXt4M1yEe2jzv8oVzIImA" memberEnd="_9NYU8s1yEe2jzv8oVzIImA _9NY8As1yEe2jzv8oVzIImA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9NYU8M1yEe2jzv8oVzIImA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9NYU8c1yEe2jzv8oVzIImA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_9NYU8s1yEe2jzv8oVzIImA" name="firma" type="_2_5fAM1yEe2jzv8oVzIImA" association="_9NXt4M1yEe2jzv8oVzIImA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_9NY8As1yEe2jzv8oVzIImA" name="departament" type="_1QFuQM1yEe2jzv8oVzIImA" aggregation="composite" association="_9NXt4M1yEe2jzv8oVzIImA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFdo0M1zEe2jzv8oVzIImA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_rsmT4M10Ee2jzv8oVzIImA" name="Locatii">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tt2Z8M10Ee2jzv8oVzIImA" name="Franta"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ugUYsM10Ee2jzv8oVzIImA" name="Spania"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_vX5g8M10Ee2jzv8oVzIImA" name="Germania"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_wnIUMM10Ee2jzv8oVzIImA" name="Romania"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ZHe6oPJaEe2XuoX6SBMxTg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZHpSsPJaEe2XuoX6SBMxTg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+  </uml:Model>
+  <Codegen:GeneratorHint xmi:id="_ZMxqUPJaEe2XuoX6SBMxTg" base_Element="_jzKrwM1vEe2jzv8oVzIImA" generatorID="Standard Java">
+    <language xmi:type="Codegen:Language" href="pathmap://Codegen_PROFILES/languages.uml#_2Zt6YCjREeayco6FJ_OtTQ"/>
+  </Codegen:GeneratorHint>
+</xmi:XMI>
