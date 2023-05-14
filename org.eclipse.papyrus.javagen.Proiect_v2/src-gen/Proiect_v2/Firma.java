@@ -4,6 +4,7 @@
 
 package Proiect_v2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /************************************************************/
@@ -14,7 +15,7 @@ public class Firma {
 	/**
 	 * 
 	 */
-	private String Nume;
+	private String nume;
 	/**
 	 * 
 	 */
@@ -27,14 +28,36 @@ public class Firma {
 	 * 
 	 */
 	private int nrDepartamente;
-	//lista cu toate departamentele? si aici sa fie adaugat departamentul
 	private List<Departament> departamente;
 	/**
 	 * 
 	 */
-	public void afisare() {
+	
+	public Firma() {
+		super();
+		this.departamente = new ArrayList<Departament>();
+		this.nrDepartamente = 0;
 	}
+	
+	public Firma(String nume, String locatieSediu, float capital) {
+		this();
+		this.nume = nume;
+		this.locatieSediu = locatieSediu;
+		this.capital = capital;
+		this.nrDepartamente = 0;
+	}
+	
+	
 
+	public void afisare() {
+		System.out.println("Nume: "+ nume);
+		System.out.println("Capital: "+ capital);
+		System.out.println("Locatie: "+ locatieSediu);
+		System.out.println("Lista departamente: ");
+		for (Departament departament : departamente) {
+			departament.afisare();
+		}
+	}
 	/**
 	 * 
 	 * @param dep 
@@ -46,7 +69,18 @@ public class Firma {
 	/**
 	 * 
 	 */
-	public void adaugareDepartament() {
+	public void adaugareDepartament(Departament dep) {
+		int ok =0;
+		for (Departament departament : departamente) {
+			if(departament.equals(dep)) {
+				System.out.println("Acest departament exista deja");
+				ok = 1;
+			}
+		}
+		if(ok == 0) {
+			departamente.add(dep);
+			nrDepartamente += 1;
+		}
 	}
 
 	/**
@@ -56,6 +90,49 @@ public class Firma {
 	public void stergereDepartament(Departament dep) {
 		if(departamente != null) {
 			departamente.remove(departamente.stream().filter(e -> e.equals(dep)).findFirst().get());
+			nrDepartamente -=1;
 		}
 	}
+
+	public String getNume() {
+		return nume;
+	}
+
+	public void setNume(String nume) {
+		this.nume = nume;
+	}
+
+	public String getLocatieSediu() {
+		return locatieSediu;
+	}
+
+	public void setLocatieSediu(String locatieSediu) {
+		this.locatieSediu = locatieSediu;
+	}
+
+	public float getCapital() {
+		return capital;
+	}
+
+	public void setCapital(float capital) {
+		this.capital = capital;
+	}
+
+	public int getNrDepartamente() {
+		return nrDepartamente;
+	}
+
+	public void setNrDepartamente(int nrDepartamente) {
+		this.nrDepartamente = nrDepartamente;
+	}
+
+	public List<Departament> getDepartamente() {
+		return departamente;
+	}
+
+	public void setDepartamente(List<Departament> departamente) {
+		this.departamente = departamente;
+	}
+	
+	
 }

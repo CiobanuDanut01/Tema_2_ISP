@@ -25,19 +25,28 @@ public class Rezervare {
 	/**
 	 * 
 	 */
+	private boolean transportAsigurat = false;
 	private float cost;
 	/**
 	 * 
 	 */
 	public Client client;
 
-	
-	
-	public Rezervare(String codIdentificare, String dataRezervare, float cost, Client client) {
+	public Rezervare(String codIdentificare, String dataRezervare, float cost,boolean transportAsigurat) {
 		super();
 		this.codIdentificare = codIdentificare;
 		this.dataRezervare = dataRezervare;
 		this.cost = cost;
+		this.transportAsigurat = transportAsigurat;
+		this.client = new Client();
+	}
+	
+	public Rezervare(String codIdentificare, String dataRezervare, float cost,boolean transportAsigurat, Client client) {
+		super();
+		this.codIdentificare = codIdentificare;
+		this.dataRezervare = dataRezervare;
+		this.cost = cost;
+		this.transportAsigurat = transportAsigurat;
 		this.client = client;
 	}
 
@@ -55,6 +64,7 @@ public class Rezervare {
 		System.out.println("Cod de identificare: "+ codIdentificare);
 		System.out.println("Data rezervarii"+dataRezervare);
 		System.out.println("Costul total: " + cost);
+		System.out.println("Asiguram transport:"+ transportAsigurat);
 	}
 
 	/**
@@ -76,7 +86,8 @@ public class Rezervare {
 	/**
 	 * 
 	 */
-	public void asigurareTransport() {//variabila bool transportAsigurat?
+	public void asigurareTransport(boolean transportAsigurat) {
+		this.transportAsigurat = transportAsigurat;
 	}
 
 	
@@ -114,6 +125,14 @@ public class Rezervare {
 
 	public void setClient(Client client) {
 		this.client = client;
+	}
+
+	public boolean isTransportAsigurat() {
+		return transportAsigurat;
+	}
+
+	public void setTransportAsigurat(boolean transportAsigurat) {
+		this.transportAsigurat = transportAsigurat;
 	}
 	
 }

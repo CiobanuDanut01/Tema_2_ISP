@@ -52,7 +52,8 @@ public class Agent_turism extends Persoana{
 	 * 
 	 * @param valoare 
 	 */
-	public void acordareDiscount(int valoare) {//Rezervare rezervare si dupa rezervare.cost - valoare || cost * valoare
+	public void acordareDiscount(int valoare, Rezervare rezervare) {
+		rezervare.setCost(rezervare.getCost()- valoare);
 	}
 
 	/**

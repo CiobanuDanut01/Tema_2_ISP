@@ -119,8 +119,8 @@ public class Persoana{
 	}
 
 
-	public void setCNP(String cNP) {
-		CNP = cNP;
+	public void setCNP(String CNP) {
+		CNP = CNP;
 	}
 
 

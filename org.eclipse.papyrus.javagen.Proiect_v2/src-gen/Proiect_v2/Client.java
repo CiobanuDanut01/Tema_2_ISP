@@ -4,6 +4,10 @@
 
 package Proiect_v2;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 /************************************************************/
 /**
  * 
@@ -13,10 +17,12 @@ public class Client extends Persoana {
 	 * 
 	 */
 	private float buget;
-
+	private List<Rezervare> rezervari;
+	
 	public Client(String nume, String prenume, String CNP, float buget) {
 		super(nume, prenume, CNP);
 		this.buget = buget;
+		this.rezervari = new ArrayList<>();
 	}
 
 	public Client() {
@@ -47,6 +53,7 @@ public class Client extends Persoana {
 	 */
 	public void adaugareRezervare(Rezervare rezervare) {
 		rezervare.client = this;
+		this.rezervari.add(rezervare);
 		System.out.println("Rezervarea a fost facuta.");
 	}
 
@@ -56,6 +63,7 @@ public class Client extends Persoana {
 	 */
 	public void anulareRezervare(Rezervare rezervare) {
 		rezervare.client = null;
+		this.rezervari.remove(rezervare);
 		System.out.println("Rezervarea a fost anulata.");
 	}
 
@@ -63,6 +71,28 @@ public class Client extends Persoana {
 	/**
 	 * 
 	 */
-	public void feedback() {//ce sa faca? ar putea clientul sa aiba un mesaj private pe care sa-l returneze
+	public void feedback() {
+		List<String> feedback = new ArrayList<>();
+        feedback.add("O vacanta pe cinste!");
+        feedback.add("Calitatea cazarii a fost excelenta!");
+        feedback.add("Transportul oferit lasa de dori...");
+        feedback.add("Siguranta clientilor nu este pe primul loc!!!");
+        feedback.add("Oferte senzationale!");
+        feedback.add("Am fost impreuna cu familia, 2 copii si sotia, pot spune ca si la anul voi apela tot la ei pentru servicii.");
+        feedback.add("A fost oribil. Dupa ce ca am primis vacanta gratis, m-au cazat la o pensiune, nici macar hotel de 4 stele...");
+        Random rand = new Random();
+        int i = rand.nextInt(feedback.size());
+        System.out.println(feedback.get(i));
 	}
+	
+
+	public float getBuget() {
+		return buget;
+	}
+
+	public void setBuget(float buget) {
+		this.buget = buget;
+	}
+	
+	
 }
